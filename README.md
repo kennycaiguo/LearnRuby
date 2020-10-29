@@ -22,7 +22,7 @@ irb(main):025:0> "Hello World".delete("Hello")                                  
 irb(main):026:0> "Hello World".delete_prefix("Hello")                                   => " World"
 
 
-irb(main):032:0> "i love"+""+"sexy girls"                                                => "i lovesexy girls"
+irb(main):032:0> "i love"+""+"sexy girls"    //可以“+”但是不能“-”                                            => "i lovesexy girls"
 irb(main):036:0>  "i love sexy girls"*3    //重复输出3次                                  => "i love sexy girlsi love sexy girlsi love sexy girls"
 
 #注意：ruby替换字符串的方法有点特别，replace只能替换整个字符串
