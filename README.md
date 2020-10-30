@@ -33,4 +33,44 @@ irb(main):030:0> "Hello World".tr('l','*')                                      
 "string ring".sub('r', 'l') # => "stling ring"
 如果您想用该表达式替换所有出现的模式，请使用gsub
 
+# ruby 循环
+## 1.while..do..end
+$i = 0
+$sum = 0
+while $i < 10 do
+  $i+=1
+  $sum+=$i*2
+  puts("i=#$i,sum=#$sum")
+end
+puts("sum=#$sum")
+结果：
+i=1,sum=2
+i=2,sum=6
+i=3,sum=12
+i=4,sum=20
+i=5,sum=30
+i=6,sum=42
+i=7,sum=56
+i=8,sum=72
+i=9,sum=90
+i=10,sum=110
+sum=110
+
+## 2.while 循环变种
+ $i = 0
+$sum = 0
+begin
+  $i+=1
+  $sum+=$i*2
+  puts("i=#$i,sum=#$sum")
+end while $i<5
+puts("sum=#$sum")
+结果：
+ i=1,sum=2
+i=2,sum=6
+i=3,sum=12
+i=4,sum=20
+i=5,sum=30
+sum=30
+
 "string ring".gsub('r','l') # => "stling ling" 
