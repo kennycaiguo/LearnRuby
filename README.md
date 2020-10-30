@@ -71,6 +71,21 @@ i=2,sum=6
 i=3,sum=12
 i=4,sum=20
 i=5,sum=30
-sum=30
-
+sum=30 $i+=1
+  $sum+=$i*2
+  puts("i=#$i,sum=#$sum")
+## 2.until循环，只有但条件<em>不</em>满足的时候才执行代码块
+ $i = 0
+$sum = 6
+until $i>$sum do
+  $i+=1
+  puts("i=#$i")
+结果：
+i=1
+i=2
+i=3
+i=4
+i=5
+i=6
+i=7 //当i=6时条件仍然满足，所以$i=$i+1 又执行了一次
 "string ring".gsub('r','l') # => "stling ling" 
