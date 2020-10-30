@@ -32,6 +32,7 @@ irb(main):030:0> "Hello World".tr('l','*')                                      
 
 "string ring".sub('r', 'l') # => "stling ring"
 如果您想用该表达式替换所有出现的模式，请使用gsub
+"string ring".gsub('r','l') # => "stling ling" 
 
 # ruby 循环
 ## 1.while..do..end
@@ -88,4 +89,26 @@ i=4
 i=5
 i=6
 i=7 //当i=6时条件仍然满足，所以$i=$i+1 又执行了一次
-"string ring".gsub('r','l') # => "stling ling" 
+
+## until循环变种
+$i = 0
+$num = 5
+begin
+   puts("在循环语句中 i = #$i" )
+   $i +=1;
+end until $i > $num
+
+## for 循环
+$sum=0
+for i in 0..5 //注意，跟rust不同的是，这里也包含5，rust是不包含5
+  $sum +=i
+  puts("sum=#$sum")
+
+end
+结果：
+sum=0
+sum=1
+sum=3
+sum=6
+sum=10
+sum=15 //
