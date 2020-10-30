@@ -98,7 +98,7 @@ begin
    $i +=1;
 end until $i > $num
 
-## for 循环
+## 4. for 循环
 $sum=0
 for i in 0..5 //注意，跟rust不同的是，这里也包含5，rust是不包含5
   $sum +=i
@@ -112,3 +112,51 @@ sum=3
 sum=6
 sum=10
 sum=15 //
+
+## 5.(expression).each do |variable[, variable...]| code end
+$total=0 
+(1..6).each do |i|
+  $total +=i
+  puts("total=#$total")
+end
+结果：
+total=1
+total=3
+total=6
+total=10
+total=15
+total=21
+# ruby条件判断
+#ruby条件语句if
+$name="Hello"
+if $name.size<5
+  puts("too short")
+elsif  $name.size>5
+  puts("too long")
+else
+  puts("ok")
+end
+结果：ok
+# ruby定义方法
+# Ruby定义方法
+## 实例1
+def test(a1="ruby",a2="python")
+  puts("first language:#{a1},second language:#{a2}")
+end
+test
+结果：first language:ruby,second language:python
+test("c++","java")
+结果:
+first language:c++,second language:java //ruby中方法的参数是可以有默认值的，如果不输入就使用默认值，go语言不行
+
+## 实例2
+# 从方法返回值 Ruby 中的每个方法默认都会返回一个值。这个返回的值是最后一个语句的值。例如：
+def add()
+  a1=5
+  a2=10
+  $sum=a1+a2
+end
+
+$total = add
+puts("total=#$total")
+结果：total=15
