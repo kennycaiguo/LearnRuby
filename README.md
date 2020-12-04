@@ -1,5 +1,6 @@
 # LearnRuby
 学习ruby(选修)
+# <a href="http://hungryant.github.io/ruby/2015/10/07/ruby-mysql-in-action.html">ruby实战-操作mysql数据库</a>
 # ruby 常用字符串操作
  打开ruby命令行交互环境
 1.cmd
